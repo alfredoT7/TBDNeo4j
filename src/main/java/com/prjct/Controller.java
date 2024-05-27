@@ -24,6 +24,5 @@ public class Controller{
         panelPrincipal.setVisible(true);
         inicioDeSesionUI.setVisible(false);
         inicioDeSesionUI.dispose();
-
     }
 }

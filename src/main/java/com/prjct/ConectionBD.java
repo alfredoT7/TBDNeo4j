@@ -42,9 +42,9 @@ public class ConectionBD {
                             "RETURN ui.nombre_UI AS nombreUI",
                     Map.of("userName", userName)
             );
-            ArrayList<String> uiNames = new ArrayList<>();
-            result.stream().forEach(record -> uiNames.add(record.get("nombreUI").asString()));
-            return uiNames;
+            ArrayList<String> uiObtenidas = new ArrayList<>();
+            result.stream().forEach(record -> uiObtenidas.add(record.get("nombreUI").asString()));
+            return uiObtenidas;
         }
     }
 }
