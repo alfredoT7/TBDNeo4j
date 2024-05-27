@@ -65,6 +65,7 @@ public class InicioDeSesionUI extends JFrame {
                 boolean reponse=controller.getUILoginData(usuarioField.getText(), contraseñaField.getText());
                 if(reponse) {
                     JOptionPane.showMessageDialog(InicioDeSesionUI.this, "Credenciales Correctas", "Correcto!!", JOptionPane.INFORMATION_MESSAGE);
+                    controller.getInterfacesHabilidatas(usuarioField.getText(), InicioDeSesionUI.this);
                 }else {
                     JOptionPane.showMessageDialog(InicioDeSesionUI.this, "Usuario o contraseña incorrectos", "Error", JOptionPane.ERROR_MESSAGE);
                 }
@@ -79,6 +80,4 @@ public class InicioDeSesionUI extends JFrame {
         });
         setVisible(true);
     }
-
-
 }

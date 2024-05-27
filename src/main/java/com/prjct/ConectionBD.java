@@ -38,7 +38,7 @@ public class ConectionBD {
     public ArrayList<String> getUiPorNombreDeUser(String userName) {
         try (Session session = driver.session(SessionConfig.forDatabase("neo4j"))) {
             var result = session.run(
-                    "MATCH (u:Usuario {nombre: $userName})-[:ROL_USER]->(r:Rol)-[:ROL_FUNCION]->(f:Funcion)-[:FUNCION_UI]->(ui:UI) " +
+                    "MATCH (u:Usuario {username: $userName})-[:ROL_USER]->(r:Rol)-[:ROL_FUNCION]->(f:Funcion)-[:FUNCION_UI]->(ui:UI) " +
                             "RETURN ui.nombre_UI AS nombreUI",
                     Map.of("userName", userName)
             );
